@@ -4,25 +4,23 @@ package conta_bancaria.model;
 
 import java.text.NumberFormat;
 
-public class Conta {
+public abstract class Conta {
 
 	
 	private int numero;
 	private int agencia;
 	private int tipo;
 	private String titular;
-	private float saldo;
+	protected float saldo;
 
 	
-	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
+	public Conta(int numero, int agencia, int tipo, String titular, double saldo2) {
 		this.numero = numero;
 		this.agencia = agencia;
 		this.tipo = tipo;
 		this.titular = titular;
-		this.saldo = saldo;
+		this.saldo = (float) saldo2;
 	}
-
-
 	public int getNumero() {
 		return numero;
 	}
